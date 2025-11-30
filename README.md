@@ -1,2 +1,2 @@
 # TropicalSmooth
-Pagina de negocio B2B Tropical Smooth 
+Pagina destino para apresentação de modelos de negocio / formato B2B
