@@ -15,15 +15,10 @@ html {
     --amarelo: #ffe403;
     --cinzaclaro: #e8e8e8;
     --maisEscura: rgb(50, 5, 50);
-    --largura-minima: 320px
-    --largura-maxima: 1200px;
+    --largura-minima: 320px --largura-maxima: 1200px;
     --padding-lateral: 20px;
     --fonte-destaque: 'Luckiest Guy';
     --fonte-padrao: 'Chewy';
-
-    /*--fonte-padrao: clamp(16px, 1.5vh, 20px);
-    --tamanho-texto: clamp(1rem, 2vh, 1.375rem)
-    --espacamento-secao: clamp(40px, 5vh, 100px)*/
 }
 
 body {
@@ -37,12 +32,13 @@ body {
 /* BARRA DE NAVEGACAO */
 
 .navegacao {
+    margin-bottom: 2rem;
     position: fixed;
-    background: rgb(168, 175, 37);
+    background: rgb(0, 0, 0);
     width: 100%;
     z-index: 100;
     padding: 0;
-    box-shadow: 5px 5px 10px rgba(3, 62, 7, 0.248);
+    box-shadow: 5px 5px 10px rgba(33, 2, 61, 0.391);
 }
 
 .menu-nav {
@@ -57,43 +53,38 @@ body {
 .menu-link {
     list-style: none;
     text-decoration: none;
-    color: var(--principal);
+    color: var(--cinzaclaro);
     font-weight: 500;
     font-family: var(--fonte-padrao);
     font-size: 18px;
     text-align: center;
-    transition: 0.5s ease ;
+    transition: 0.5s ease;
 }
 
 .menu-link:hover {
-    color: #eadb68;
+    color: #d0cfc8d7;
     font-size: 23px;
 }
 
-.navdiv {
-    margin: 0;
-    padding: 0;
-}
-.img-nav {
-    width: 120px;
-    height: 120px;
-    padding: 0;
-}
 
 /* IMAGEM PRINCIPAL / BACKGROUND*/
 .background-inicio {
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding-top: 60px;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
+    z-index: -1;
 }
 
 .fotodrink-inicio {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+
+    object-fit: cover;
 }
 
 .inicio-caixa {
@@ -113,7 +104,7 @@ body {
 }
 
 .introducao {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(44, 2, 57);
     text-align: center;
 }
@@ -126,8 +117,8 @@ body {
 /* SOBRE A EMPRESA */
 .quemsomos {
     position: relative;
-    background-color: #883eab;
-    padding: 6rem 1rem;
+    background-color: black;
+    padding: 2rem 1rem;
     margin-bottom: 0;
     padding-bottom: 0;
     z-index: 10;
@@ -140,45 +131,57 @@ body {
     width: 100%;
     height: 150px;
     top: -150px;
-    background-image: linear-gradient(45deg, #883eab 25%, transparent 25%), linear-gradient(-45deg, #883eab 25%, transparent 25% );
+    background-image: linear-gradient(45deg, black 25%, transparent 25%), linear-gradient(-45deg, black 25%, transparent 25%);
     background-size: 150px 150px;
     background-repeat: repeat-x;
     z-index: 3;
 }
 
-.titulo {
+.titulo-quemsomos {
     font-size: 40px;
-    color: rgb(209, 186, 209);
+    color: rgb(233, 228, 228);
     font-weight: 750;
     text-align: center;
     padding: 20px;
     padding-top: 60px;
     margin-bottom: 0;
-    text-shadow: 2px 2px 3px var(--principal);
+    text-shadow: 2px 2px 3px rgba(212, 219, 5, 0.331);
+}
+
+.titulo {
+    font-size: 40px;
+    color: rgb(6, 6, 6);
+    font-weight: 750;
+    text-align: center;
+    padding: 20px;
+    padding-top: 60px;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.331);
 }
 
 .paragrafo-sobre {
     text-align: center;
     padding: 5rem;
     padding-bottom: 8rem;
-    color: rgb(44, 2, 57);
-    margin-bottom: 0;    
+    color: rgb(244, 243, 242);
+    margin-bottom: 0;
 }
 
 /* DIVISAO DO CONTEUDO/ROLAGEM*/
-.parallax.divisao{
+.parallax.divisao {
     position: relative;
-    z-index: 25; 
-    background-color: #883eab; 
+    z-index: 25;
+    background-color: #000000;
     margin-top: 0;
-    margin-bottom: 0; 
+    margin-bottom: 0;
     padding: 0;
     width: 100%;
 }
+
 .parallax-divsecao3 {
     display: block;
     width: 100%;
-    height: 400px; 
+    height: 400px;
     background-image: url('img/divsec3-parallax.png');
     /* Parallax */
     background-attachment: fixed;
@@ -198,12 +201,15 @@ body {
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 40px;
-    background-color: #883eab;
+    background-color: #e4d0ac;
     z-index: 2;
 }
 
+
 .produto-caixa {
     display: block;
+    justify-content: center;
+    align-items: center;
     padding: 4rem;
     max-width: 1000px;
     margin: 3rem auto;
@@ -216,29 +222,30 @@ body {
 
 .produto-classe {
     text-align: center;
-    color: rgb(44, 2, 57);
+    color: rgb(14, 3, 18);
 }
 
 .produto-descricao {
-    color: rgb(44, 2, 57);
+    color: rgb(10, 2, 13);
     margin: 0;
     padding: 10px;
 }
 
 /* DIVISAO CONTEUDO/REVEAL*/
-.parallax.divisao{
+.parallax.divisao {
     position: relative;
-    z-index: 25; 
-    background-color: #883eab; 
+    z-index: 25;
+    background-color: #000000;
     margin-top: 0;
-    margin-bottom: 0; 
+    margin-bottom: 0;
     padding: 0;
     width: 100%;
 }
+
 .parallax-divsecao4 {
     display: block;
     width: 100%;
-    height: 400px; 
+    height: 400px;
     background-image: url('img/divsec4.png');
     /* Parallax */
     background-attachment: fixed;
@@ -254,42 +261,43 @@ body {
 
 /* MODELOS DE PARCERIA / SOCIEDADE */
 .parceria {
-    background-color: rgb(159, 128, 176);
+    background-color: #e4d0ac;
     display: flex;
     flex-direction: column;
+    padding: 50px;
 }
 
 .paragrafo-parceria {
     font-size: 20px;
     text-align: center;
-    color: rgb(44, 2, 57);
+    color: rgb(14, 3, 18);
 }
 
 .caixa-modelos {
-    margin: 4rem;
+    margin: 3rem;
     padding: 20px;
     display: inline-block;
     border-radius: 16px;
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.316);
+    background: rgba(200, 198, 180, 0.198);
     margin-bottom: 0;
 }
 
 .caixa-modelos-parceria {
-    border: 1px solid rgb(46, 4, 78);
+    border: 1px solid rgb(14, 3, 18);
     border-radius: 8px;
     padding: 20px;
 }
 
 .modelo {
     text-align: center;
-    color: rgb(44, 2, 57);
+    color: rgb(14, 3, 18);
 }
 
 .paragrafo-modelo {
     text-align: center;
-    color: rgb(44, 2, 57);
+    color: rgb(14, 3, 18);
 }
 
 .resumo {
@@ -301,141 +309,24 @@ body {
     text-align: center;
 }
 
-/* TABELA COMPARATIVA */
-.titulo-tabela {
-    text-align: center;
-    margin: 20px;
-}
 
-.modelo-comparacao {
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  color: #2f1e47;
-  margin: 4rem;
-  padding: 32px;
-  box-shadow: 0 22px 40px -18px rgba(30, 35, 45, 0.25);
-  backdrop-filter: blur(4px);
-}
-
-.modelo-comparacao h3 {
-  font-size: 1.3rem;
-  margin-bottom: 18px;
-  letter-spacing: 0.02em;
-  color: var(--principal);
-  text-transform: uppercase;
-}
-
-.modelo-comparacao .table-wrapper {
-  overflow-x: auto;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 181, 72, 0.25);
-  background-color: rgba(235, 229, 238, 0.817);
-}
-
-.modelo-comparacao table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 540px;
-}
-
-.modelo-comparacao caption {
-  caption-side: top;
-  padding: 18px 22px;
-  font-weight: 600;
-  text-align: left;
-  color: var(--principal);
-  background: rgba(230, 226, 221, 0.12);
-  border-bottom: 1px solid rgba(255, 181, 72, 0.25);
-  border-radius: 14px 14px 0 0;
-  text-align: center;
-}
-
-.modelo-comparacao thead th {
-  background: #ccbbdc;
-  color: var(--principal);
-  font-size: 0.95rem;
-  letter-spacing: 0.015em;
-  padding: 16px 20px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-}
-
-.modelo-comparacao tbody td {
-  padding: 16px 20px;
-  border-bottom: 1px solid rgba(171, 181, 194, 0.25);
-  font-size: 0.95rem;
-  vertical-align: top;
-  text-align: center;
-}
-
-
-.modelo-comparacao tbody tr:nth-child(odd) {
-  background: rgba(226, 223, 219, 0.07);
-}
-
-.modelo-comparacao tbody tr:hover {
-  background: rgba(136, 107, 142, 0.12);
-  transition: background 0.25s ease;
-}
-
-.modelo-comparacao tbody td:first-child {
-  font-weight: 600;
-  color: #2a2f36;
-  width: 32%;
-  text-align: center;
-}
-
-.modelo-comparacao tbody td:nth-child(2),
-.modelo-comparacao tbody td:nth-child(3) {
-  color: #424957;
-}
-
-@media (max-width: 720px) {
-  .modelo-comparacao {
-    padding: 24px;
-  }
-
-  .modelo-comparacao caption {
-    font-size: 0.95rem;
-    padding: 16px 18px;
-  }
-
-  .modelo-comparacao thead th,
-  .modelo-comparacao tbody td {
-    padding: 14px 16px;
-    font-size: 0.9rem;
-  }
-}
 /* ADESAO / CTA SECTION */
 .intro {
     text-align: center;
     font-size: 1.3rem;
-    color: rgb(44, 2, 57);
-    padding: 10px;
+    color: rgb(14, 3, 18);
+    padding: 30px;
 }
 
-.timeline-adesao {
-    text-align: center;
-    list-style: none;
-    gap: 2rem;
-    border: 1px solid var(--principal);
-    border-radius: 14px;
-    background-color: #ccbbdc;
-    box-shadow: 3px 3px 3px #883eab;
-    padding: 4rem;
-    max-width: 1000px;
-    margin: 2rem auto;
-    border-radius: 16px;
-    border: 1px solid var(--vidro);
-}
 
-.titulo-adesao {
-    color: rgb(44, 2, 57);
+.titulo-modelo {
+    color: rgb(14, 3, 18);
     font-size: 20px;
+    text-align: center;
 }
 
 .paragrafo-adesao {
-    color: rgb(44, 2, 57);
+    color: rgb(14, 3, 18);
     padding-bottom: 10px;
     font-size: 15px;
 }
@@ -443,29 +334,30 @@ body {
 .div-button {
     margin: 3rem auto;
     display: flex;
-    
+
 }
+
 .cta-button {
-  margin: 0 auto;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  gap: 20px;
-  background: linear-gradient(135deg, #c4d325, #f8f803c8);
-  color: rgba(61, 3, 79, 0.946);
-  padding: 14px 26px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 20px;
+    background: linear-gradient(135deg, #f53500, #f15202d4);
+    color: rgba(5, 5, 5, 0.946);
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cta-button:hover {
-  font-size: 20px;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px -12px rgba(45, 1, 62, 0.731);
+    font-size: 20px;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px -12px rgba(45, 1, 62, 0.731);
 }
 
 .cta-contato {
@@ -473,92 +365,113 @@ body {
     background-color: rgb(159, 128, 176);
 }
 
+
+
 /* FORMULARIO */
-.div-form { 
-  background: #4b036f7a;
-  color: rgb(44, 2, 57);
-  padding: 48px 32px;
-  border-radius: 18px;
-  text-align: center;
-  max-width: 540px;
-  margin: 0 auto;
+.adesao {
+    background-image: url(img/bg-form.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 30px;
 }
 
-.cta-contato h3 {
-  font-size: 1.9rem;
-  margin-bottom: 12px;
+.div-form {
+    background-color: black;
+    color: rgb(232, 225, 234);
+    padding: 48px 32px;
+    border-radius: 18px;
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
 }
 
-.cta-contato p {
-  margin-bottom: 16px;
-  color: rgba(245, 245, 247, 0.82);
-}
 
 .cta-subtitle {
-  margin: 24px 0 12px;
-  font-weight: 600;
-  color: rgba(245, 245, 247, 0.9);
+    margin: 24px 0 12px;
+    font-weight: 600;
+    color: rgba(245, 245, 247, 0.9);
 }
 
 .contato-form {
-  display: grid;
-  gap: 16px;
-  text-align: left;
+    display: grid;
+    gap: 16px;
+    text-align: left;
 }
 
 .campo {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .campo label {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: rgba(245, 245, 247, 0.9);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(245, 245, 247, 0.9);
 }
 
 .campo input,
 .campo textarea {
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px double rgba(107, 9, 188, 0.344);
-  background: rgba(255, 255, 255, 0.08);
-  color: #f5f5f7;
-  font-size: 0.95rem;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px double rgba(201, 191, 209, 0.344);
+    background: rgba(255, 255, 255, 0.08);
+    color: #f5f5f7;
+    font-size: 0.95rem;
 }
 
 .campo input:focus,
 .campo textarea:focus {
-  outline: 2px solid rgba(255, 255, 255, 0.911);
-  outline-offset: 2px;
+    outline: 2px solid rgba(255, 255, 255, 0.911);
+    outline-offset: 2px;
 }
 
 
 .honeypot {
-  display: none;
+    display: none;
 }
 
 .aviso-privacidade {
-  display: block;
-  margin-top: 18px;
-  font-size: 0.75rem;
-  color: rgba(245, 245, 247, 0.6);
+    display: block;
+    margin-top: 18px;
+    font-size: 0.75rem;
+    color: rgba(245, 245, 247, 0.6);
 }
 
 @media (max-width: 640px) {
-  .cta-contato {
-    padding: 36px 22px;
-  }
+    .cta-contato {
+        padding: 36px 22px;
+    }
 }
 
 footer {
- padding: 40px;
-background-color: #714c82;
-color: #e8e8e8;
+    padding: 40px;
+    background-color: #141414;
+    color: #e8e8e8;
+    gap: 2rem;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    flex: 0 0 auto;
+    text-align: center;
+}
+.logo-footer {
+    max-height: 200px;               /* ajuste conforme o layout */
+    height: auto;
+    width: auto;
 }
 
 footer small {
+    display: flex;
+    justify-content: center;
     text-align: center;
     color: #b3bccec6;
     font-size: small;
